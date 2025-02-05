@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.messageComponentBox {
+  background-color: #6b6b6b;
+}
+.messageComponentBox_header {
+  color: aquamarine;
+}
+.messageComponentBox_text {
+  color: aquamarine;
+}/*# sourceMappingURL=App.css.map */
