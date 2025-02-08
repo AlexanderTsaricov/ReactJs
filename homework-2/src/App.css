@@ -1,0 +1,68 @@
+.commentsListBox {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.commentsListBox .addCommentBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.commentsListBox .addCommentBox_input {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+.commentsListBox .addCommentBox_input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.commentsListBox .addCommentBox_button {
+  padding: 8px 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.commentsListBox .addCommentBox_button:hover {
+  background: #0062cc;
+}
+.commentsListBox .commentsListBox_commentBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.commentsListBox .commentsListBox_commentBox:hover {
+  transform: scale(1.02);
+}
+.commentsListBox .commentsListBox_commentBox .commentsListBox_text {
+  flex: 1;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+.commentsListBox .commentsListBox_commentBox .commentsListBox_button {
+  padding: 5px 10px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.commentsListBox .commentsListBox_commentBox .commentsListBox_button:hover {
+  background: #bd2130;
+}/*# sourceMappingURL=App.css.map */
