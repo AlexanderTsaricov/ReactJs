@@ -1,0 +1,32 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.converterBox {
+  margin: 25px;
+}
+
+.toDoListBox {
+  margin: 25px;
+}
+
+.addDoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 4px solid #6200ea;
+  /* Фиолетовая рамка */
+  border-radius: 12px;
+  /* Закругленные углы */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.doListBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}/*# sourceMappingURL=App.css.map */
