@@ -1,0 +1,180 @@
+@charset "UTF-8";
+.addProductBox {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.addProductBox_input, .addProductBox_inputBig {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.addProductBox_input:focus, .addProductBox_inputBig:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+.addProductBox_inputBig {
+  height: 60px;
+}
+.addProductBox_radioButtonBox {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+.addProductBox_radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.addProductBox_radioLabel input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.addProductBox_radioLabel input:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.addProductBox_radioLabel input:checked::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.addProductBox_button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addProductBox_button:hover {
+  background: #0056b3;
+}
+.addProductBox_button:active {
+  background: #004093;
+}
+
+.productListBox {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.productListBox_header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.productBox {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.productBox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+.productBox_header {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+.productBox_discription {
+  font-size: 14px;
+  color: #555;
+}
+.productBox_availability {
+  font-size: 14px;
+  font-weight: bold;
+  color: #130c0c;
+  padding: 5px;
+  border-radius: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.productBox_price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.productBox_delete {
+  background: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+.productBox_delete:hover {
+  background: #c82333;
+  box-shadow: 0px 2px 8px rgba(220, 53, 69, 0.5);
+}
+.productBox_delete:active {
+  background: #a71d2a;
+}
+.productBox_change {
+  background: #ffc107;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  align-self: flex-start;
+  /* Прижимает кнопку влево */
+}
+.productBox_change:hover {
+  background: #e0a800;
+  box-shadow: 0px 2px 8px rgba(255, 193, 7, 0.5);
+}
+.productBox_change:active {
+  background: #c69500;
+}/*# sourceMappingURL=App.css.map */
