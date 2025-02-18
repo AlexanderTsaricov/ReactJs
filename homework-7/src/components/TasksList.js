@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Task from "./Task";
-import { SET_COMPLETED_TASK, SET_NOTCOMPLETED_TASK } from "../actions/taskActions";
+import { SET_COMPLETED_TASK, SET_NOTCOMPLETED_TASK, ADD_TASKS } from "../actions/taskActions";
+import { fetchTasks } from "../data/fetchTasks";
 
 function TasksList() {
     const tasks = useSelector((state) => state.tasks).tasks || [];
@@ -16,6 +17,18 @@ function TasksList() {
         console.log(`Enter button setNotCompleted by id ${id}`);
         dispatch({ type: SET_NOTCOMPLETED_TASK, payload: id });
     };
+
+    useEffect(() => {
+        dispatch(fetchTasks())
+            .unwrap() // развернёт результат из `fulfilled`
+            .then((data) => {
+                console.log("Данные загружены:", data);
+                dispatch({ type: ADD_TASKS, payload: data });
+            })
+            .catch((error) => {
+                console.error("Ошибка загрузки:", error);
+            });
+    }, [dispatch]);
 
     console.log("Redux state.tasks:", tasks);
     return (
