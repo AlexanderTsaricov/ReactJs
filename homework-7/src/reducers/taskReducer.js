@@ -34,7 +34,12 @@ const tasksReducer = (state = initialState, action) => {
         case ADD_TASKS:
             return {
                 ...state,
-                tasks: [...state.tasks, ...action.payload],
+                tasks: [
+                    ...state.tasks,
+                    ...action.payload.filter(
+                        (task) => !state.tasks.some((existingTask) => existingTask.id === task.id)
+                    ),
+                ],
             };
         default:
             return state;
