@@ -1,0 +1,102 @@
+.taskBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    &_title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &_completed {
+        font-size: 1rem;
+        opacity: 0.8;
+        margin-bottom: 12px;
+    }
+
+    &_button {
+        padding: 8px 16px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &::before {
+            content: "🔄 ";
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+.addTaskBox {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88, #ff99ac);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    &_input {
+        flex: 1;
+        padding: 10px;
+        font-size: 1rem;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        &:focus {
+            border-color: white;
+        }
+    }
+
+    &_button {
+        padding: 10px 16px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        transition: background 0.3s ease, transform 0.1s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
