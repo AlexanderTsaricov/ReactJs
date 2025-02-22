@@ -1,11 +1,25 @@
+import React from "react";
 import menu_icon from "../../inons/menu_icon.svg";
 import profile_icon from "../../inons/profile_icon.svg";
 import basket_icon from "../../inons/basket_icon.svg";
 
 function HeaderMenu() {
+    const handleMenu = () => {
+        let menu = document.getElementById("menu");
+
+        if (menu.classList.contains("toggleMenu_of")) {
+            menu.classList.remove("toggleMenu_of");
+        } else {
+            menu.classList.add("toggleMenu_of");
+        }
+    };
     return (
         <div className="menu_headerMenu">
-            <button className="menu_headerMenu_menuButton button" id="menuButton">
+            <button
+                className="menu_headerMenu_menuButton button"
+                onClick={() => {
+                    handleMenu();
+                }}>
                 <img src={menu_icon} alt="menu" />
             </button>
             <a href="#" className="menu_headerMenu_profileButton">

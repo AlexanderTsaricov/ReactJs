@@ -1,4 +1,5 @@
 import "./App.css";
+import CartReclam from "./components/CartReclam";
 import Header from "./components/headers/Header";
 import Logo from "./components/Logo";
 import ToggleMenu from "./components/ToggleMenu";
@@ -9,7 +10,9 @@ function App() {
             <Header />
             <ToggleMenu />
             <Logo />
-            <main></main>
+            <main>
+                <CartReclam />
+            </main>
         </>
     );
 }
