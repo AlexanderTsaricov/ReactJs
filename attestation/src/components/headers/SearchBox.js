@@ -4,7 +4,7 @@ import search_icon from "../../inons/search_icon.svg";
 function SearchBox() {
     return (
         <div className="menu_searchBox">
-            <a href="index.html" className="menu_searchBox_brandIcon">
+            <a href="/" className="menu_searchBox_brandIcon">
                 <img src={brand_icon} alt="brand" />
             </a>
             <button className="menu_searchBox_searchButton button">

@@ -1,19 +1,15 @@
 import "./App.css";
-import CartReclam from "./components/CartReclam";
-import Header from "./components/headers/Header";
-import Logo from "./components/Logo";
-import ToggleMenu from "./components/ToggleMenu";
-
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
     return (
-        <>
-            <Header />
-            <ToggleMenu />
-            <Logo />
-            <main>
-                <CartReclam />
-            </main>
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/catalog" element={<Catalog />} />
+            </Routes>
+        </Router>
     );
 }
 
