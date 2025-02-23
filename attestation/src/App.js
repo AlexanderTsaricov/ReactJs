@@ -4,6 +4,7 @@ import Catalog from "./pages/Catalog";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import Registration from "./pages/Registration";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/registration" element={<Registration />} />
             </Routes>
         </Router>
     );
