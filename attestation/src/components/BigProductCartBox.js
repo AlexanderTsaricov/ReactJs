@@ -23,11 +23,29 @@ function getSliceProducts(products, countInOneSlice) {
 }
 
 function BigProductCartBox({ allProducts }) {
-    const slisedProducts = getSliceProducts(allProducts, 9);
+    const [smallMonitor, setSmalMonitor] = useState(window.matchMedia("(max-width: 951px)").matches);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 951px)");
+        const changeMedia = (e) => setSmalMonitor(e.matches);
+        mediaQuery.addEventListener("change", changeMedia);
+    }, []);
+
+    let countProducts = smallMonitor ? 8 : 9;
+
+    const slisedProducts = getSliceProducts(allProducts, countProducts);
     const [selectedSlice, setSelectedSlice] = useState(1);
+
     useEffect(() => {
         setTimeout(() => {
             const activeSliceButton = document.getElementById(`sliceButton-${selectedSlice}`);
+            const lastActiveSliceButton = document.querySelector(".productCartBox_catalogListButtons_purpleNumber");
+
+            if (lastActiveSliceButton) {
+                lastActiveSliceButton.classList.remove("productCartBox_catalogListButtons_purpleNumber");
+                lastActiveSliceButton.classList.add("catalogListNumber");
+            }
+
             if (!activeSliceButton) {
                 console.log(`Error: элемент с id=sliceButton-${selectedSlice} не найден`);
                 return;
@@ -36,6 +54,7 @@ function BigProductCartBox({ allProducts }) {
             activeSliceButton.classList.add("productCartBox_catalogListButtons_purpleNumber");
         }, 0);
     }, [selectedSlice]);
+
     return (
         <div className="productCartBox contentCenter productCartBoxCatalog">
             <div className="productCartBox_cartBox productCartBoxCatalog" id="cartBox">
@@ -57,7 +76,8 @@ function BigProductCartBox({ allProducts }) {
                         <a
                             key={slisedProducts.indexOf(products)}
                             className="catalogListNumber"
-                            id={`sliceButton-${slisedProducts.indexOf(products) + 1}`}>
+                            id={`sliceButton-${slisedProducts.indexOf(products) + 1}`}
+                            onClick={() => setSelectedSlice(slisedProducts.indexOf(products) + 1)}>
                             {slisedProducts.indexOf(products) + 1}
                         </a>
                     ))}
