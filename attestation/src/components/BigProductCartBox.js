@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Cart from "./Cart";
+import Cart from "./Card";
 /**
  * The function will split the array of products into parts with the number of products specified in countInOneSlice
  * @param {Array} products - array with all data products

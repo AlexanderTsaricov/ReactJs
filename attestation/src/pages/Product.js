@@ -5,7 +5,7 @@ import BreadCrumpsBox from "../components/BeadCrumpsBox";
 import BigImageBox from "../components/BigImageBox";
 import BigProductDiscription from "../components/BigProductDiscription";
 import { allProducts } from "../productsData/productLocalCreate";
-import Cart from "../components/Cart";
+import Cart from "../components/Card";
 import SmallBigFooter from "../components/footers/SmallBigFooter";
 import { useState, useEffect } from "react";
 
