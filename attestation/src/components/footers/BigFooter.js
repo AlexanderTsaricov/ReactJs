@@ -5,7 +5,7 @@ import LastFooter from "./footerMuduls/LastFooter";
 
 function BigFooter() {
     return (
-        <footer class="bigFooter">
+        <footer className="bigFooter">
             <FirstFooter />
             <SecondFooter />
             <LastFooter />

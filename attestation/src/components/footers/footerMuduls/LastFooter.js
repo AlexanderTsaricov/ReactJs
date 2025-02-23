@@ -2,12 +2,12 @@ import React from "react";
 
 function LastFooter() {
     return (
-        <section class="bigFooter_lastFooter contentCenter">
-            <h2 class="bigFooter_lastFooter_text">&#9400; 2022 Brand All Rights Reserved.</h2>
-            <div class="bigFooter_lastFooter_linkBox">
-                <a href="#" class="bigFooter_lastFooter_linkBox_footerLinkIcon">
+        <section className="bigFooter_lastFooter contentCenter">
+            <h2 className="bigFooter_lastFooter_text">&#9400; 2022 Brand All Rights Reserved.</h2>
+            <div className="bigFooter_lastFooter_linkBox">
+                <a href="#" className="bigFooter_lastFooter_linkBox_footerLinkIcon">
                     <svg
-                        class="bigFooter_lastFooter_linkBox_footerIcon"
+                        className="bigFooter_lastFooter_linkBox_footerIcon"
                         width="11"
                         height="16"
                         viewBox="0 0 11 16"
@@ -19,9 +19,9 @@ function LastFooter() {
                         />
                     </svg>
                 </a>
-                <a href="#" class="bigFooter_lastFooter_linkBox_footerLinkIcon">
+                <a href="#" className="bigFooter_lastFooter_linkBox_footerLinkIcon">
                     <svg
-                        class="bigFooter_lastFooter_linkBox_footerIcon"
+                        className="bigFooter_lastFooter_linkBox_footerIcon"
                         width="16"
                         height="17"
                         viewBox="0 0 16 17"
@@ -40,9 +40,9 @@ function LastFooter() {
                         </defs>
                     </svg>
                 </a>
-                <a href="#" class="bigFooter_lastFooter_linkBox_footerLinkIcon">
+                <a href="#" className="bigFooter_lastFooter_linkBox_footerLinkIcon">
                     <svg
-                        class="bigFooter_lastFooter_linkBox_footerIcon"
+                        className="bigFooter_lastFooter_linkBox_footerIcon"
                         width="13"
                         height="16"
                         viewBox="0 0 13 16"
@@ -61,9 +61,9 @@ function LastFooter() {
                         </defs>
                     </svg>
                 </a>
-                <a href="#" class="bigFooter_lastFooter_linkBox_footerLinkIcon">
+                <a href="#" className="bigFooter_lastFooter_linkBox_footerLinkIcon">
                     <svg
-                        class="bigFooter_lastFooter_linkBox_footerIcon"
+                        className="bigFooter_lastFooter_linkBox_footerIcon"
                         width="17"
                         height="16"
                         viewBox="0 0 17 16"

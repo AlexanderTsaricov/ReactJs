@@ -5,25 +5,25 @@ import crown from "../../../inons/crown.svg";
 
 function FirstFooter() {
     return (
-        <section class="bigFooter_firstFooter contentCenter">
-            <article class="bigFooter_firstFooter_box">
+        <section className="bigFooter_firstFooter contentCenter">
+            <article className="bigFooter_firstFooter_box">
                 <img src={car} alt="icon" />
-                <h2 class="bigFooter_firstFooter_box_headerText">Free Delivery</h2>
-                <p class="bigFooter_firstFooter_box_text">
+                <h2 className="bigFooter_firstFooter_box_headerText">Free Delivery</h2>
+                <p className="bigFooter_firstFooter_box_text">
                     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                 </p>
             </article>
-            <article class="bigFooter_firstFooter_box">
+            <article className="bigFooter_firstFooter_box">
                 <img src={percent} alt="" />
-                <h2 class="bigFooter_firstFooter_box_headerText">Sales & discounts</h2>
-                <p class="bigFooter_firstFooter_box_text">
+                <h2 className="bigFooter_firstFooter_box_headerText">Sales & discounts</h2>
+                <p className="bigFooter_firstFooter_box_text">
                     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                 </p>
             </article>
-            <article class="bigFooter_firstFooter_box">
+            <article className="bigFooter_firstFooter_box">
                 <img src={crown} alt="" />
-                <h2 class="bigFooter_firstFooter_box_headerText">Quality assurance</h2>
-                <p class="bigFooter_firstFooter_box_text">
+                <h2 className="bigFooter_firstFooter_box_headerText">Quality assurance</h2>
+                <p className="bigFooter_firstFooter_box_text">
                     Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
                 </p>
             </article>
