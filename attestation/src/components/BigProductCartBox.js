@@ -55,6 +55,20 @@ function BigProductCartBox({ allProducts }) {
         }, 0);
     }, [selectedSlice]);
 
+    const previousSlice = () => {
+        if (selectedSlice > 1) {
+            setSelectedSlice(selectedSlice - 1);
+        }
+        console.log("click <");
+    };
+
+    const nextSlice = () => {
+        if (selectedSlice + 1 <= slisedProducts.length) {
+            setSelectedSlice(selectedSlice + 1);
+        }
+        console.log("click >");
+    };
+
     return (
         <div className="productCartBox contentCenter productCartBoxCatalog">
             <div className="productCartBox_cartBox productCartBoxCatalog" id="cartBox">
@@ -63,7 +77,7 @@ function BigProductCartBox({ allProducts }) {
                 ))}
             </div>
             <div className="productCartBox_catalogListButtons">
-                <a href="#" id="previous">
+                <a id="previous" className="arrowSlice" onClick={() => previousSlice()}>
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M7.99512 2L2.99512 7L7.99512 12L6.99512 14L-0.00488281 7L6.99512 0L7.99512 2Z"
@@ -82,7 +96,7 @@ function BigProductCartBox({ allProducts }) {
                         </a>
                     ))}
                 </div>
-                <a href="#" id="next">
+                <a id="next" className="arrowSlice" onClick={() => nextSlice()}>
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M-0.00500488 12L4.995 7L-0.00500488 2L0.994995 0L7.995 7L0.994995 14L-0.00500488 12Z"
