@@ -25,7 +25,7 @@ function HeaderMenu() {
             <a href="#" className="menu_headerMenu_profileButton">
                 <img src={profile_icon} alt="profile" />
             </a>
-            <a href="cart.html" className="menu_headerMenu_basketButton button">
+            <a href="/cart" className="menu_headerMenu_basketButton button">
                 <img src={basket_icon} alt="basket" />
                 <svg
                     className="menuCartCount_svg"

@@ -1,24 +1,36 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function PayBox() {
+    const products = useSelector((state) => state.cart).cart || [];
+
+    const getTotalPrice = () => {
+        let price = 0;
+        products.map((product) => {
+            const productPrice = product.productPrice * product.count;
+            price += productPrice;
+        });
+        return price;
+    };
+
     return (
-        <article class="payBox">
-            <form action="#" class="payBox_adressBox">
-                <h2 class="payBox_adressBox_headText">SHIPPING ADRESS</h2>
-                <input type="text" name="" id="" class="payBox_adressBox_input" placeholder="Bangladesh" />
-                <input type="text" name="" id="" class="payBox_adressBox_input" placeholder="State" />
-                <input type="number" name="" id="" class="payBox_adressBox_input" placeholder="Postcode / Zip" />
-                <button class="payBox_adressBox_button">GET A QUOTE</button>
+        <article className="payBox">
+            <form action="#" className="payBox_adressBox">
+                <h2 className="payBox_adressBox_headText">SHIPPING ADRESS</h2>
+                <input type="text" name="" id="" className="payBox_adressBox_input" placeholder="Bangladesh" />
+                <input type="text" name="" id="" className="payBox_adressBox_input" placeholder="State" />
+                <input type="number" name="" id="" className="payBox_adressBox_input" placeholder="Postcode / Zip" />
+                <button className="payBox_adressBox_button">GET A QUOTE</button>
             </form>
-            <div class="payBox_paymentBox">
-                <p class="payBox_paymentBox_subTotal">
-                    SUB TOTAL <span class="payBox_paymentBox_subTotal_price">$900</span>
+            <div className="payBox_paymentBox">
+                <p className="payBox_paymentBox_subTotal">
+                    SUB TOTAL <span className="payBox_paymentBox_subTotal_price">${getTotalPrice()}</span>
                 </p>
-                <p class="payBox_paymentBox_grandTotal">
-                    GRAND TOTAL <span class="payBox_paymentBox_grandTotal_price">$900</span>
+                <p className="payBox_paymentBox_grandTotal">
+                    GRAND TOTAL <span className="payBox_paymentBox_grandTotal_price">${getTotalPrice()}</span>
                 </p>
-                <hr class="payBox_paymentBox_line" />
-                <button class="payBox_paymentBox_button">PROCEED TO CHECKOUT</button>
+                <hr className="payBox_paymentBox_line" />
+                <button className="payBox_paymentBox_button">PROCEED TO CHECKOUT</button>
             </div>
         </article>
     );

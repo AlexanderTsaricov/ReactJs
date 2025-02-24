@@ -20,7 +20,7 @@ function AddedToCartProduct({ product }) {
             </div>
             <button className="cartProductBox_product_buttonClose" id={product.id}>
                 <svg
-                    class="cartProductBox_product_buttonClose_svg"
+                    className="cartProductBox_product_buttonClose_svg"
                     width="18"
                     height="18"
                     viewBox="0 0 18 18"

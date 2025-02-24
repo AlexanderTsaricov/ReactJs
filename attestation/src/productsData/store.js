@@ -12,7 +12,7 @@ const persistedReducer = persistReducer(persistConfig, brandReducer);
 
 export const store = configureStore({
     reducer: {
-        tasks: persistedReducer,
+        cart: persistedReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({

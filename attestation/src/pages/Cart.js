@@ -13,7 +13,7 @@ function Cart() {
             <ToggleMenu />
             <main>
                 <SmallBreadCrumpsBox headerText={"SHOPPING CART"} />
-                <section class="cartContent contentCenter">
+                <section className="cartContent contentCenter">
                     <CartProductBox />
                     <PayBox />
                 </section>
