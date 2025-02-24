@@ -4,7 +4,6 @@ import ToggleMenu from "../components/ToggleMenu";
 import BreadCrumpsBox from "../components/BeadCrumpsBox";
 import FilterBox from "../components/FilterBox";
 import BigProductCartBox from "../components/BigProductCartBox";
-import { allProducts } from "../productsData/productLocalCreate";
 import BigFooter from "../components/footers/BigFooter";
 
 function Catalog() {
@@ -15,7 +14,7 @@ function Catalog() {
             <main>
                 <BreadCrumpsBox />
                 <FilterBox />
-                <BigProductCartBox allProducts={allProducts} />
+                <BigProductCartBox />
             </main>
             <BigFooter />
         </>

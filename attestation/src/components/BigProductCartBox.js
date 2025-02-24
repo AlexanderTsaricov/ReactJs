@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cart from "./Card";
+import { useSelector } from "react-redux";
+import { allProducts } from "../productsData/productLocalCreate";
 /**
  * The function will split the array of products into parts with the number of products specified in countInOneSlice
  * @param {Array} products - array with all data products
@@ -22,8 +24,40 @@ function getSliceProducts(products, countInOneSlice) {
     return result;
 }
 
-function BigProductCartBox({ allProducts }) {
+function BigProductCartBox() {
     const [smallMonitor, setSmalMonitor] = useState(window.matchMedia("(max-width: 951px)").matches);
+    const filterSettings = useSelector((state) => state.filterSettings);
+
+    const getFiltredProducts = () => {
+        let filtredProductsXS = [];
+        let filtredProductsS = [];
+        let filterdProductsM = [];
+        let filterdProductsL = [];
+        if (!filterSettings.xs && !filterSettings.s && !filterSettings.m && !filterSettings.l) {
+            return allProducts;
+        }
+        if (filterSettings.xs) {
+            filtredProductsXS = allProducts.filter((product) => product.size === "XS");
+        }
+        if (filterSettings.s) {
+            filtredProductsS = allProducts.filter((product) => product.size === "S");
+        }
+        if (filterSettings.m) {
+            filterdProductsM = allProducts.filter((product) => product.size === "M");
+        }
+        if (filterSettings.l) {
+            filterdProductsL = allProducts.filter((product) => product.size === "L");
+        }
+
+        const resultFiltredProducts = [
+            ...filtredProductsXS,
+            ...filtredProductsS,
+            ...filterdProductsM,
+            ...filterdProductsL,
+        ];
+        console.log(resultFiltredProducts);
+        return resultFiltredProducts;
+    };
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 951px)");
@@ -33,7 +67,7 @@ function BigProductCartBox({ allProducts }) {
 
     let countProducts = smallMonitor ? 8 : 9;
 
-    const slisedProducts = getSliceProducts(allProducts, countProducts);
+    const slisedProducts = getSliceProducts(getFiltredProducts(), countProducts);
     const [selectedSlice, setSelectedSlice] = useState(1);
 
     useEffect(() => {

@@ -13,10 +13,7 @@ export const settingsReducer = (state = initialState, action) => {
             console.log(
                 `Set filter settings: XS: ${action.payload.xs}, S: ${action.payload.s}, M: ${action.payload.m}, L: ${action.payload.l}`
             );
-            return {
-                type: SET_FILTER_SETTING,
-                settings: action.payload,
-            };
+            return action.payload;
         }
         default:
             return state;
