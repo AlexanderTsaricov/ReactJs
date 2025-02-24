@@ -7,6 +7,7 @@ const initialState = {
 const brandReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PRODUCT:
+            console.log(`Added product with id: ${action.payload.id}`);
             const id = action.payload.id;
             const isHaveProduct = state.cart.some((product) => product.id === id);
             if (isHaveProduct) {
