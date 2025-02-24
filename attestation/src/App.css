@@ -251,6 +251,7 @@ a {
   gap: 11px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .productCartBox .productCartBox_cartBox .productCartBox_cartBox_cart .productCartBox_cartBox_cart_textBox {
   padding: 16px;
