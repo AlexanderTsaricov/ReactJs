@@ -1,4 +1,9 @@
-import { ADD_PRODUCT, DELETE_PRODUCT_FROM_CART, SET_QUALITY_PRODUCT } from "./actions/productActions";
+import {
+    ADD_PRODUCT,
+    DELETE_PRODUCT_FROM_CART,
+    SET_QUALITY_PRODUCT,
+    SET_FILTER_SETTING,
+} from "./actions/productActions";
 
 const initialState = {
     cart: [],

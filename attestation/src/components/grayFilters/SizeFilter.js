@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { setFilterSetting } from "../../productsData/actions/productActions";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 function SizeFilter() {
+    const [sizeXS, setSizeXS] = useState(false);
+    const [sizeS, setSizeS] = useState(false);
+    const [sizeM, setSizeM] = useState(false);
+    const [sizeL, setSizeL] = useState(false);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        const settings = { xs: sizeXS, s: sizeS, m: sizeM, l: sizeL };
+        dispatch(setFilterSetting(settings));
+    }, [sizeXS, sizeS, sizeM, sizeL]);
+
     return (
         <details className="filterBox_grayBox_variableFilterButton">
             <summary className="filterBox_grayBox_variableFilterButton_text">
@@ -17,8 +32,8 @@ function SizeFilter() {
                     <input
                         className="filterBox_grayBox_variableFilterButton_size_checkBox"
                         type="checkbox"
-                        name=""
-                        id=""
+                        value={sizeXS}
+                        onChange={(e) => setSizeXS(e.target.checked)}
                     />
                     <p className="filterBox_grayBox_variableFilterButton_size_text">XS</p>
                 </div>
@@ -26,8 +41,8 @@ function SizeFilter() {
                     <input
                         className="filterBox_grayBox_variableFilterButton_size_checkBox"
                         type="checkbox"
-                        name=""
-                        id=""
+                        value={sizeS}
+                        onChange={(e) => setSizeS(e.target.checked)}
                     />
                     <p className="filterBox_grayBox_variableFilterButton_size_text">S</p>
                 </div>
@@ -35,8 +50,8 @@ function SizeFilter() {
                     <input
                         className="filterBox_grayBox_variableFilterButton_size_checkBox"
                         type="checkbox"
-                        name=""
-                        id=""
+                        value={sizeM}
+                        onChange={(e) => setSizeM(e.target.checked)}
                     />
                     <p className="filterBox_grayBox_variableFilterButton_size_text">M</p>
                 </div>
@@ -44,8 +59,8 @@ function SizeFilter() {
                     <input
                         className="filterBox_grayBox_variableFilterButton_size_checkBox"
                         type="checkbox"
-                        name=""
-                        id=""
+                        value={sizeL}
+                        onChange={(e) => setSizeL(e.target.checked)}
                     />
                     <p className="filterBox_grayBox_variableFilterButton_size_text">L</p>
                 </div>

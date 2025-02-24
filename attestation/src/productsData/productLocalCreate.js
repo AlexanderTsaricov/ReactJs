@@ -6,7 +6,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "XS",
         id: 0,
     },
     {
@@ -16,7 +16,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "XS",
         id: 1,
     },
     {
@@ -26,7 +26,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "S",
         id: 2,
     },
     {
@@ -36,7 +36,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "S",
         id: 3,
     },
     {
@@ -46,7 +46,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "M",
         id: 4,
     },
     {
@@ -56,7 +56,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "M",
         id: 5,
     },
     {
@@ -66,7 +66,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "L",
         id: 6,
     },
     {
@@ -76,7 +76,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "L",
         id: 7,
     },
     {
@@ -86,7 +86,7 @@ export const allProducts = [
             "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         productPrice: 52.0,
         color: "Red",
-        size: "XL",
+        size: "M",
         id: 8,
     },
 ];
