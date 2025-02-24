@@ -12,6 +12,9 @@ function HeaderMenu() {
         products.map((product) => {
             totalCount += product.count;
         });
+        if (totalCount > 9) {
+            return "9+";
+        }
         return totalCount;
     };
 

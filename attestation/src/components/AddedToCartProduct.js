@@ -9,7 +9,7 @@ function AddedToCartProduct({ product }) {
                 <p className="cartProductBox_product_textBox_text">
                     Price:
                     <span className="cartProductBox_product_textBox_text_priceSpan">
-                        {` ${product.productPrice * product.count}`}
+                        {` $${product.productPrice * product.count}`}
                     </span>
                 </p>
                 <p className="cartProductBox_product_textBox_text">Color: {product.color}</p>
