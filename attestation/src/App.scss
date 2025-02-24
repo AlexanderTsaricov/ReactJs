@@ -896,9 +896,16 @@ a {
                         color: $purpleSite;
                     }
                     &_quantitySpan {
-                        padding: 1px 17px;
+                        padding: 2px 17px;
                         margin-left: 24px;
-                        border: 1px solid #EAEAEA
+                        border: 1px solid #EAEAEA;
+                        max-width: 11px;
+                        font-family: $fontFamily;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 21.6px;
+                        letter-spacing: 0%;
+                        text-align: center;
                     }
                 }
             }

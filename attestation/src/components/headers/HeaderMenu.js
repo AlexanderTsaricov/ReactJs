@@ -12,8 +12,8 @@ function HeaderMenu() {
         products.map((product) => {
             totalCount += product.count;
         });
-        if (totalCount > 9) {
-            return "9+";
+        if (totalCount > 99) {
+            return "99+";
         }
         return totalCount;
     };

@@ -1,6 +1,20 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteProductFromCart, setQualityProduct } from "../productsData/actions/productActions";
+import { useState, useEffect } from "react";
 
 function AddedToCartProduct({ product }) {
+    const dispatch = useDispatch();
+    const handleDeleteProduct = () => {
+        dispatch(deleteProductFromCart(product));
+    };
+
+    const [count, setCount] = useState(product.count);
+
+    useEffect(() => {
+        dispatch(setQualityProduct(product, Number(count)));
+    }, [count]);
+
     return (
         <div className="cartProductBox_product" id={product.id}>
             <img className="cartProductBox_product_img" alt="productImg" src={product.srcImg} />
@@ -15,10 +29,19 @@ function AddedToCartProduct({ product }) {
                 <p className="cartProductBox_product_textBox_text">Color: {product.color}</p>
                 <p className="cartProductBox_product_textBox_text">Size: {product.size}</p>
                 <p className="cartProductBox_product_textBox_text">
-                    Quality: <span className="cartProductBox_product_textBox_text_quantitySpan">{product.count}</span>
+                    Quality:
+                    <input
+                        className="cartProductBox_product_textBox_text_quantitySpan"
+                        type="text"
+                        value={count}
+                        onChange={(e) => setCount(e.target.value)}
+                    />
                 </p>
             </div>
-            <button className="cartProductBox_product_buttonClose" id={product.id}>
+            <button
+                className="cartProductBox_product_buttonClose"
+                id={product.id}
+                onClick={() => handleDeleteProduct()}>
                 <svg
                     className="cartProductBox_product_buttonClose_svg"
                     width="18"
